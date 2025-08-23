@@ -1,0 +1,440 @@
+
+/* --- Global Styles --- */
+/* A reset to remove default margin/padding and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(6, 8, 12);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- CONTAINER 1: Hero Section Styles --- */
+.container_1 {
+    position: relative;
+    top: 390px;
+    margin: 100% 0 0 0;
+     /* Creates a large initial gap before scrolling */
+}
+
+section.others {
+    position: relative;
+    top: 590px;
+}
+
+.container_1 .head {
+    position: relative;
+    top: 300px;
+}
+
+.container_1 p,
+.container_1 h1 {
+    text-align: center;
+}
+
+.container_1 h1 {
+    font-size: 3em;
+}
+
+/* Social media icons */
+.media-icon {
+    display: flex;
+    justify-content: center;
+    animation: pulsar 3s ease-in-out infinite alternate;
+}
+
+.media-icon img {
+    border-radius: 50%;
+    width: 60px;
+    padding: 6px;
+}
+
+.media-icon img:hover {
+    transform: scale(106%);
+}
+
+/* Scroll down arrow */
+span {
+    display: flex;
+    justify-content: center;
+}
+
+i#angle-double-down {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 40px;
+    animation: pulsar 2s infinite alternate;
+}
+
+/* --- CONTAINER 2: Portfolio Content Styles --- */
+
+.conteudo .head {
+    text-align: center;
+    padding: 20px;
+    /* Animation for the header to appear on scroll */
+    animation: apear_header 1s linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+
+    p {
+        color: rgba(255, 255, 255, 0.425);
+    }
+}
+
+.header .projects {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+
+    #project-cordel {
+        animation: apear-right 3s linear forwards;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+
+    #project-android {
+        animation: apear-right 3s linear forwards;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+
+    #project-ler {
+        animation: apear-left 3s linear forwards;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+
+    #project-login {
+        animation: apear-left 3s linear forwards;
+        animation-timeline: view();
+        animation-range: cover 0% cover 50%;
+    }
+}
+
+@keyframes apear-left {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes apear-right {
+    from {
+        opacity: 0;
+        transform: translateX(+50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.projects img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.projects img:hover{
+    transform: scale(104%);
+}
+
+
+/* Knowledge/Skills section styles */
+div.conhecimento {
+    display: flex;
+    justify-content: center; /* Centering the skill boxes */
+    margin-bottom: 30px;
+}
+
+/* Base style for the skill boxes */
+div.conhecimento span {
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    cursor: pointer;
+
+    /* Propriedades para centralizar o ícone */
+    display: flex; /* Habilita o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Base style for the icon */
+.conhecimento i {
+    font-size: 3em; /* Altera o tamanho do ícone */
+    color: #ffffff; /* Altera a cor do ícone */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de hover */
+}
+
+/* Animations for each skill box to appear on scroll */
+span.glass-html {
+    background-color: rgb(26, 8, 0);
+    box-shadow: 3px 3px 3px rgba(24, 24, 24, 0.842);
+
+    animation: apear_html 1s linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+    /*color of html icon*/
+    i {
+        color: #E34F26;
+    }
+}
+
+span.glass-css {
+    background-color: rgba(1, 4, 19, 0.979);
+    box-shadow: 3px 3px 3px rgba(24, 24, 24, 0.842);
+
+    animation: apear_css 1s linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+    /*color of css icon*/
+    i {
+        color: #1572B6;
+    }
+}
+
+span.glass-js {
+    background-color: rgb(22, 16, 2);
+    box-shadow: 3px 3px 3px rgba(24, 24, 24, 0.842);
+
+    animation: apear_js 1s linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+    /*color of JS icon*/
+    i {
+        color: #F7DF1E;
+    }
+}
+
+/* --- Hability/Skills Percentage Section Styles --- */
+.hability {
+    background-color: rgba(66, 65, 65, 0.384);
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(34, 34, 34, 0.795);
+    /* Animation for the skills box to appear on scroll */
+    animation: box_hability_apear 1s linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 50%;
+}
+
+.hability h1 {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
+
+.hability ul {
+    list-style: none; /* Removing bullet points from the list */
+    padding: 0 10px;
+}
+
+.hability li {
+    margin-bottom: 15px; /* Spacing between skill items */
+}
+
+.hability p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.box_perc {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(6, 8, 12);
+    border-radius: 20px;
+    width: 100%;
+    height: 20px;
+}
+
+#perc_html,
+#perc_css,
+#perc_js {
+    position: absolute;
+    left: 0;
+    background-color: rgb(211, 209, 209);
+    height: 20px;
+}
+
+#perc_html {
+    width: 90%;
+    animation: perc_html 1s linear forwards;
+}
+
+#perc_css {
+    width: 80%;
+    animation: perc_css 1s linear forwards;
+}
+
+#perc_js {
+    width: 30%;
+    animation: perc_js 1s linear forwards;
+}
+
+/* --- Keyframe Animations --- */
+@keyframes pulsar {
+    to {
+        transform: translateY(8px);
+    }
+}
+
+@keyframes apear_header {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-16px);
+        opacity: 1;
+    }
+}
+
+@keyframes apear_html {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+    
+@keyframes apear_css {
+    from {
+        transform: scale(99%);
+        opacity: 0;
+    }
+    to {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes apear_js {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes box_hability_apear {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes perc_html {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes perc_css {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes perc_js {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30%;
+    }
+}
+
+.about-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+
+.about-me-head {
+    margin-top: 30px;
+}
+
+.about-me .about-me-list {
+    margin: 30px;
+
+    ul li {
+        display: flex;
+        align-items: justify;
+    }
+
+}
+
+.about-me img {
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    filter: grayscale(100%)
+}
+.about-me button {
+    background-color: rgb(4, 22, 49);
+    border: none;
+    color: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+
+    animation: apear-button 2s linear forwards;
+    animation-timeline: view();
+    animation-range: cover 0% cover 10%;
+}
+
+@keyframes apear-button {
+     from {
+        transform: translate(20px, 20px);
+     }
+     to {
+        transform: translate(0);
+     }
+}
+
+.about-me button:hover {
+    background: transparent;
+    border: 2px solid white;
+    transform: scale(105%);
+}
