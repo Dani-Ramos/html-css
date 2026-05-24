@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Escolar</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="top-bar">
+  <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">☰</div>
+  <h1>📚 Biblioteca Escolar</h1>
+</header>
+
+<!-- MENU -->
+<div id="menu" class="menu">
+  <a href="https://minedu.gov.cv/" target="_blank">Site Minedu</a>
+  <a href="php/index.html" target="_blank">Contacte-nos</a>
+</div>
+
+<h2 class="titulo">8º Ano</h2>
+
+<!-- GRID LIVROS -->
+<div class="grid" id="gridLivros">
+
+<!-- CTV -->
+<button class="livro"
+    style="background-image:url('imagens/ctv8.png')"
+    onclick="abrirLivro('livros/ctv8.pdf','CTV 7º Ano')">
+    CTV
+</button>
+
+<!-- Físico-Químico -->
+<button class="livro"
+    style="background-image:url('imagens/fisicoquimico8.png')"
+    onclick="abrirLivro('livros/fisicoquimico8.pdf','Físico-Químico 8º Ano')">
+    Físico-Químico
+</button>
+
+<!-- Francês -->
+<button class="livro"
+    style="background-image:url('imagens/frances8.png')"
+    onclick="abrirLivro('livros/frances8.pdf','Francês 8º Ano')">
+    Francês
+</button>
+
+<!-- Geografia -->
+<button class="livro"
+    style="background-image:url('imagens/historia8.png')"
+    onclick="abrirLivro('livros/historia8.pdf','Geografia 8º Ano')">
+    História
+</button>
+
+<!-- Inglês -->
+<button class="livro"
+    style="background-image:url('imagens/ingles8.png')"
+    onclick="abrirLivro('livros/ingles8.pdf','Inglês 8º Ano')">
+    Inglês
+</button>
+
+<!-- Matemática -->
+<button class="livro"
+    style="background-image:url('imagens/matematica8.png')"
+    onclick="abrirLivro('livros/matematica8.pdf','Matemática 8º Ano')">
+    Matemática
+</button>
+
+<!-- Português -->
+<button class="livro"
+    style="background-image:url('imagens/portugues8.png')"
+    onclick="abrirLivro('livros/portugues8.pdf','Português 8º Ano')">
+    Português
+</button>
+
+</div>
+
+<!-- LEITURA PDF -->
+<div id="viewerPDF" class="viewer">
+  <h2 id="tituloLivro"></h2>
+
+  <iframe id="pdfFrame"></iframe>
+
+  <button class="btn" onclick="voltar()">Voltar</button>
+</div>
+
+<!-- LEITURA IMAGEM -->
+<div id="viewerIMG" class="viewer">
+  <h2 id="tituloImg"></h2>
+
+  <img id="imgLivro" />
+
+  <button class="btn" onclick="voltar()">Voltar</button>
+</div>
+
+<footer>
+  Todos os direitos autorais reservados - Ministério da Educação | Uso exclusivo para fins educacionais.
+  Made by Danielson Ramos
+</footer>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
