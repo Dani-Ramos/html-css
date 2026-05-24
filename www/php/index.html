@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <main id="conteiner">
+        <form id="form_login" action="mailto:danielsonramosbarreto5@gmail.com" method="post" enctype="text/plain">
+            <div id="form_header">
+                <h1>Contacte-nos</h1>
+                <i id="mode_icon" class="fa-solid fa-moon" onclick="mudar()"></i>
+            </div>
+
+            <div id="social_media">
+                <a href="https://www.facebook.com/danieson.ramos.743280" target="_blank">
+                    <img src="imagens/facebook.jpg" alt="Facebook">
+                </a>
+                
+                <a href="https://github.com/Dani-Ramos" target="_blank">
+                    <img src="imagens/github.png" alt="Github">
+                </a>
+            </div>
+
+            <div id="inputs">
+                <div class="input_box">
+                    <label for="iname">
+                        Name
+                        <div class="input_field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="name" id="iname">
+                        </div>
+                    </label>
+                </div>
+
+                <div class="input_box">
+                    <label for="iemail">
+                        Email
+                        <div class="input_field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="email" id="iemail">
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="input-group">
+                    <span class="input-icon"><i class="fa-solid fa-comment"></i></span>
+                    <textarea placeholder="Sua mensagem..." rows="4" required name="mensagem"></textarea>
+                </div>
+            </div>
+
+            </div>
+
+            <button type="submit" id="submit_button">
+                Enviar
+            </button>
+        </form>
+    </main>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
